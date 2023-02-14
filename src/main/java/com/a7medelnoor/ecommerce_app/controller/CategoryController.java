@@ -1,8 +1,11 @@
 package com.a7medelnoor.ecommerce_app.controller;
 
+import com.a7medelnoor.ecommerce_app.common.ApiResponse;
 import com.a7medelnoor.ecommerce_app.model.Category;
 import com.a7medelnoor.ecommerce_app.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,9 +18,10 @@ public class CategoryController {
     CategoryService categoryService;
 
     @PostMapping("/create")
-    public String createCategory(@RequestBody Category category){
+    public ResponseEntity<ApiResponse> createCategory(@RequestBody Category category){
+
      categoryService.createCategory(category);
-     return "Success";
+     return new ResponseEntity<>(new ApiResponse(true,"a new category successfully created"), HttpStatus.CREATED);
     }
     @GetMapping("/list")
     public List<Category> getCategory(){
@@ -25,8 +29,11 @@ public class CategoryController {
 
     }
     @PostMapping("/update/{categoryId}")
-    public String updateCategory(@PathVariable("categoryId") int categoryId, @RequestBody Category category){
+    public ResponseEntity<ApiResponse> updateCategory(@PathVariable("categoryId") int categoryId, @RequestBody Category category){
+        if(!categoryService.findById(categoryId)){
+            return new ResponseEntity<>(new ApiResponse(false, "category id doesn't exist"), HttpStatus.NOT_FOUND);
+        }
         categoryService.updateCategory(categoryId, category);
-        return "Success";
+        return new ResponseEntity<>(new ApiResponse(true, "category updated successfully"), HttpStatus.OK);
     }
 }
