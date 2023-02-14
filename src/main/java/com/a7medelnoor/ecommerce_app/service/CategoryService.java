@@ -18,4 +18,12 @@ public class CategoryService {
     public List<Category> getListCategory(){
         return categoryRepository.findAll();
     }
+
+    public void updateCategory(int categoryId, Category updateCategory) {
+        Category category = categoryRepository.getById(categoryId);
+        category.setCategoryName(updateCategory.getCategoryName());
+        category.setDescription(updateCategory.getDescription());
+        category.setImageUrl(updateCategory.getImageUrl());
+        categoryRepository.save(category);
+    }
 }

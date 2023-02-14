@@ -24,4 +24,9 @@ public class CategoryController {
         return categoryService.getListCategory();
 
     }
+    @PostMapping("/update/{categoryId}")
+    public String updateCategory(@PathVariable("categoryId") int categoryId, @RequestBody Category category){
+        categoryService.updateCategory(categoryId, category);
+        return "Success";
+    }
 }
