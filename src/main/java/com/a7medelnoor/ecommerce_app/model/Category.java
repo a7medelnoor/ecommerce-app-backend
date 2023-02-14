@@ -1,16 +1,19 @@
-package model;
+package com.a7medelnoor.ecommerce_app.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
+
 @Data
-@Entity(name = "categories")
+@Entity
+@Table(name = "categories")
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     @Column(name = "category_Name")
-     private  String categoryName;
+    private String categoryName;
     @Column(name = "description")
 
     private String description;

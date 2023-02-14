@@ -1,10 +1,9 @@
-package service;
+package com.a7medelnoor.ecommerce_app.service;
 
-import model.Category;
+import com.a7medelnoor.ecommerce_app.model.Category;
+import com.a7medelnoor.ecommerce_app.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import repository.CategoryRepository;
 
 @Service
 public class CategoryService {
