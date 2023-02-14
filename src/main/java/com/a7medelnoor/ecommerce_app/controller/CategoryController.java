@@ -3,10 +3,9 @@ package com.a7medelnoor.ecommerce_app.controller;
 import com.a7medelnoor.ecommerce_app.model.Category;
 import com.a7medelnoor.ecommerce_app.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/category")
@@ -19,5 +18,10 @@ public class CategoryController {
     public String createCategory(@RequestBody Category category){
      categoryService.createCategory(category);
      return "Success";
+    }
+    @GetMapping("/list")
+    public List<Category> getCategory(){
+        return categoryService.getListCategory();
+
     }
 }

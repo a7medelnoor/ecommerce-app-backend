@@ -2,6 +2,7 @@ package com.a7medelnoor.ecommerce_app.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Data
