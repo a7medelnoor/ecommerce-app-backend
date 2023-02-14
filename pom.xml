@@ -49,146 +49,45 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+<!--		<dependency>-->
+<!--    <groupId>io.springfox</groupId>-->
+<!--    <artifactId>springfox-boot-starter</artifactId>-->
+<!--    <version>3.0.0</version>-->
+<!--</dependency>-->
+
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.9.2</version>
+</dependency>
 		<dependency>
 			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.5.2</version>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.2</version>
 		</dependency>
-		<dependency>
-			<groupId>org.axonframework</groupId>
-			<artifactId>axon-spring-boot-starter</artifactId>
-			<version>3.4</version>
-		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-scala-module_2.12</artifactId>-->
-<!--			<version>1.0.6</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-scala-module_2.10</artifactId>-->
-<!--			<version>1.0.6</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-scala-module_2.11</artifactId>-->
-<!--			<version>1.0.6</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-scala-module_2.13</artifactId>-->
-<!--			<version>1.0.6</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-core</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-jaxrs2</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-integration</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-annotations</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-models</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.cloudflight.swagger-template</groupId>-->
-<!--			<artifactId>swagger-template-angular10</artifactId>-->
-<!--			<version>1.0.3</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-project</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.bootique.swagger</groupId>-->
-<!--			<artifactId>bootique-swagger</artifactId>-->
-<!--			<version>2.0.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-parser</artifactId>-->
-<!--			<version>1.0.63</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-codegen-maven-plugin</artifactId>-->
-<!--			<version>2.4.29</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-play2_2.12</artifactId>-->
-<!--			<version>1.7.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-play2_2.11</artifactId>-->
-<!--			<version>1.7.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.github.swagger-akka-http</groupId>-->
-<!--			<artifactId>swagger-scala-module_3</artifactId>-->
-<!--			<version>2.9.0</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger</groupId>-->
-<!--			<artifactId>swagger-generator</artifactId>-->
-<!--			<version>2.4.29</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.openapitools.swagger</groupId>-->
-<!--			<artifactId>swagger-maven-plugin</artifactId>-->
-<!--			<version>2.1.6</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.github.swagger-akka-http</groupId>-->
-<!--			<artifactId>swagger-enumeratum-module_3</artifactId>-->
-<!--			<version>2.6.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-annotations-jakarta</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-maven-plugin</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-models-jakarta</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-core-jakarta</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.swagger.core.v3</groupId>-->
-<!--			<artifactId>swagger-jaxrs2-jakarta</artifactId>-->
-<!--			<version>2.2.8</version>-->
-<!--		</dependency>-->
-<!--<dependency>-->
-<!--        <groupId>io.springfox</groupId>-->
-<!--        <artifactId>springfox-spring-webflux</artifactId>-->
-<!--        <version>3.0.0</version>-->
-<!--    </dependency>-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
+ <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.10</version>
+    </dependency>
+
+    <dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-webmvc-core</artifactId>
+    <version>1.6.14</version>
+</dependency>
+
 	</dependencies>
 
 	<build>
