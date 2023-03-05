@@ -33,7 +33,7 @@ public class CategoryController {
         if(!categoryService.findById(categoryId)){
             return new ResponseEntity<>(new ApiResponse(false, "category id doesn't exist"), HttpStatus.NOT_FOUND);
         }
-        categoryService.updateCategory(categoryId, category);
+        categoryService.editCategory(categoryId, category);
         return new ResponseEntity<>(new ApiResponse(true, "category updated successfully"), HttpStatus.OK);
     }
 }
